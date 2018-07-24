@@ -62,6 +62,7 @@ def get_ordered_block_from_data(data0,mark0):
 x_data0 = np.loadtxt("./obserables_for_train.txt ")
 #x_data0=x_data0*10
 y_data0 = np.loadtxt("./parameters_for_train.txt")
+y_data0*=10
 #y_data0[:,2]*=20
 ## define placeholder for inputs to network
 with tf.name_scope('inputs'):
@@ -74,10 +75,10 @@ l2=tf.layers.dense(l1,128,activation=tf.nn.relu,use_bias=False)
 l2=tf.layers.dropout(l2)
 l2=tf.layers.dense(l2,256,activation=tf.nn.relu,use_bias=False)
 l2=tf.layers.dropout(l2)
-l2=tf.layers.dense(l2,512,activation=tf.nn.relu,use_bias=False)
-l2=tf.layers.dropout(l2)
-l2=tf.layers.dense(l2,256,activation=tf.nn.relu,use_bias=False)
-l2=tf.layers.dropout(l2)
+#l2=tf.layers.dense(l2,512,activation=tf.nn.relu,use_bias=False)
+#l2=tf.layers.dropout(l2)
+#l2=tf.layers.dense(l2,256,activation=tf.nn.relu,use_bias=False)
+#l2=tf.layers.dropout(l2)
 l2=tf.layers.dense(l2,128,activation=tf.nn.relu,use_bias=False)
 l2=tf.layers.dropout(l2)
 l2=tf.layers.dense(l2,64,activation=tf.nn.relu,use_bias=False)
@@ -111,7 +112,7 @@ for i in range(500000):
 		#print(sess.run(ys,feed_dict={xs:x_data1,ys:y_data1}))
 #y_data0[:,2]/=20
 x_data1,y_data1 = get_random_block_from_data(x_data0,y_data0)
-y_data1=y_data1
+
 pred=sess.run(prediction,feed_dict={xs:x_data1,ys:y_data1})
 print(pred)
 print(y_data1)
@@ -131,7 +132,7 @@ y_test=np.tile(y_test,[2,1])
 
 x_test1=x_test[0:44,:]
 y_test1=y_test[0:44,:]
-
+y_test1*=10
 print(sess.run(prediction,feed_dict={xs:x_test1,ys:y_test1}))
 print(y_test1)
 print(sess.run(loss,feed_dict={xs:x_test1,ys:y_test1}))
@@ -144,8 +145,8 @@ c=np.zeros([23,5,2])
 c[:,:,0]=y_test1[0:23,:]
 #y_test1[:,2]*=20
 c[:,:,1]=b[0:23,:]
-np.savetxt('./ob_to_p/predictions.txt',a[0:23,:])
-np.savetxt('./ob_to_p/error_relative.txt',b[0:23,:])
+np.savetxt('./ob_to_p/predictions_10.txt',a[0:23,:])
+np.savetxt('./ob_to_p/error_relative_10.txt',b[0:23,:])
 np.set_printoptions(precision=3, suppress=True)
 print(b[0:23,:])
 
@@ -171,7 +172,7 @@ server.login(from_addr,password)
 server.sendmail(from_addr,to_addr,msg1.as_string())
 server.quit()
 
-Re=True
+Re=False
 if Re:
 	#y_data0[:,2]/=10
 	y_data0*=10
