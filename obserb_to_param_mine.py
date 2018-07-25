@@ -60,7 +60,7 @@ def get_ordered_block_from_data(data0,mark0):
 	data_y=mark0.reshape([5,44,5])
 	return(data_x,data_y)
 x_data0 = np.loadtxt("./obserables_for_train.txt ")
-#x_data0=x_data0*10
+x_data0=x_data0*10
 y_data0 = np.loadtxt("./parameters_for_train.txt")
 y_data0*=10
 #y_data0[:,2]*=20
@@ -75,7 +75,7 @@ l2=tf.layers.dense(l1,128,activation=tf.nn.relu,use_bias=False)
 l2=tf.layers.dropout(l2)
 l2=tf.layers.dense(l2,256,activation=tf.nn.relu,use_bias=False)
 l2=tf.layers.dropout(l2)
-#l2=tf.layers.dense(l2,512,activation=tf.nn.relu,use_bias=False)
+l2=tf.layers.dense(l2,512,activation=tf.nn.relu,use_bias=False)
 #l2=tf.layers.dropout(l2)
 #l2=tf.layers.dense(l2,256,activation=tf.nn.relu,use_bias=False)
 #l2=tf.layers.dropout(l2)
@@ -87,12 +87,17 @@ l2=tf.layers.dropout(l2)
 #l1=add_conv(l1,100,activation_function=tf.nn.relu)
 ## add output layer
 prediction=tf.layers.dense(l2,5,use_bias=False)
+weight=np.diag((1,1,1,1,1))
+reverse=np.diag((1,1,1,1,1))
+weight_tf=tf.Variable(weight,trainable=False,dtype=tf.float32)
+reverse_tf=tf.Variable(reverse,trainable=False,dtype=tf.float32)
 prediction1 = tf.reshape(prediction,[-1,1])
+labels=tf.matmul(ys,weight_tf)
 with tf.name_scope('loss'):
 
-	loss=tf.reduce_mean(tf.reduce_sum(tf.square(tf.reshape(ys,[-1,1])-prediction1),reduction_indices=[1]))
+	loss=tf.reduce_mean(tf.reduce_sum(tf.square(tf.reshape(labels,[-1,1])-prediction1),reduction_indices=[1]))
 with tf.name_scope('train'):
-	train_step=tf.train.AdamOptimizer(0.0005).minimize(loss)
+	train_step=tf.train.AdamOptimizer(0.00005).minimize(loss)
 
 init=tf.initialize_all_variables()
 
@@ -101,7 +106,7 @@ writer=tf.summary.FileWriter("logs/",sess.graph)
 sess.run(init)
 
 
-for i in range(500000):
+for i in range(1000000):
 
 	x_data1, y_data1 = get_random_block_from_data(x_data0, y_data0)
 		#y_data1=y_data1*10
@@ -131,12 +136,14 @@ x_test=np.tile(x_test,[2,1])
 y_test=np.tile(y_test,[2,1])
 
 x_test1=x_test[0:44,:]
+x_test1*=10
 y_test1=y_test[0:44,:]
 y_test1*=10
 print(sess.run(prediction,feed_dict={xs:x_test1,ys:y_test1}))
 print(y_test1)
 print(sess.run(loss,feed_dict={xs:x_test1,ys:y_test1}))
 a=sess.run(prediction,feed_dict={xs:x_test1,ys:y_test1})
+a=np.matmul(a,reverse)
 #a[:,2]/=20
 #y_test1[:,2]/=20
 print(y_test1[0:23,:])
@@ -172,11 +179,11 @@ server.login(from_addr,password)
 server.sendmail(from_addr,to_addr,msg1.as_string())
 server.quit()
 
-Re=False
+Re=True
 if Re:
 	#y_data0[:,2]/=10
-	y_data0*=10
-	for i in range(200000):
+	x_data0/=10
+	for i in range(1000000):
 
 		x_data1, y_data1 = get_random_block_from_data(x_data0, y_data0)
 		# y_data1=y_data1*10
