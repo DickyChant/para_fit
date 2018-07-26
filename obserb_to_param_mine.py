@@ -69,20 +69,20 @@ with tf.name_scope('inputs'):
 	xs=tf.placeholder(tf.float32,[None,56],name='x_input')
 	ys=tf.placeholder(tf.float32,[None,5],name='y_input')
 ##　add hidden layer
-l1=tf.layers.dense(xs,64,activation=tf.nn.relu,use_bias=False)
+l1=tf.layers.dense(xs,256,activation=tf.nn.relu,use_bias=False)
 l1=tf.layers.dropout(l1)
-l2=tf.layers.dense(l1,128,activation=tf.nn.relu,use_bias=False)
+l2=tf.layers.dense(l1,256,activation=tf.nn.relu,use_bias=False)
 l2=tf.layers.dropout(l2)
 l2=tf.layers.dense(l2,256,activation=tf.nn.relu,use_bias=False)
 l2=tf.layers.dropout(l2)
-l2=tf.layers.dense(l2,512,activation=tf.nn.relu,use_bias=False)
+#l2=tf.layers.dense(l2,512,activation=tf.nn.relu,use_bias=False)
 #l2=tf.layers.dropout(l2)
 #l2=tf.layers.dense(l2,256,activation=tf.nn.relu,use_bias=False)
 #l2=tf.layers.dropout(l2)
-l2=tf.layers.dense(l2,128,activation=tf.nn.relu,use_bias=False)
+l2=tf.layers.dense(l2,256,activation=tf.nn.relu,use_bias=False)
 l2=tf.layers.dropout(l2)
-l2=tf.layers.dense(l2,64,activation=tf.nn.relu,use_bias=False)
-l2=tf.layers.dropout(l2)
+#l2=tf.layers.dense(l2,64,activation=tf.nn.relu,use_bias=False)
+#l2=tf.layers.dropout(l2)
 ## add conv layer
 #l1=add_conv(l1,100,activation_function=tf.nn.relu)
 ## add output layer
@@ -97,7 +97,7 @@ with tf.name_scope('loss'):
 
 	loss=tf.reduce_mean(tf.reduce_sum(tf.square(tf.reshape(labels,[-1,1])-prediction1),reduction_indices=[1]))
 with tf.name_scope('train'):
-	train_step=tf.train.AdamOptimizer(0.00005).minimize(loss)
+	train_step=tf.train.AdamOptimizer(0.0005).minimize(loss)
 
 init=tf.initialize_all_variables()
 
@@ -106,7 +106,7 @@ writer=tf.summary.FileWriter("logs/",sess.graph)
 sess.run(init)
 
 
-for i in range(1000000):
+for i in range(200000):
 
 	x_data1, y_data1 = get_random_block_from_data(x_data0, y_data0)
 		#y_data1=y_data1*10

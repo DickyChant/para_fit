@@ -139,4 +139,5 @@ for i in range(4):
 		ax.plot(x_data3[18*56:], x_test1[0:23, :].reshape(-1, 1)[18 * 56:], 'r-', lw=0.5)
 #lines=ax.plot(x_data3,x_test1[0:23,:].reshape(-1,1),'r-',lw=0.5)
 plt.ion()
+fig1.savefig('Result1.jpg')
 plt.show()
