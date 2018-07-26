@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3b45364-13ba-4bac-a43b-5e9a59dcc243" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_para_to_obs.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_para_to_obs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ob_to_p/data_otop.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/ob_to_p/data_otop.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ob_to_p/error_relative_10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ob_to_p/error_relative_10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ob_to_p/predictions_10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ob_to_p/predictions_10.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obserb_to_param_mine.py" beforeDir="false" afterPath="$PROJECT_DIR$/obserb_to_param_mine.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/p_to_ob/data_ptoo.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/p_to_ob/data_ptoo.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pre.aux" beforeDir="false" afterPath="$PROJECT_DIR$/pre.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pre.log" beforeDir="false" afterPath="$PROJECT_DIR$/pre.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pre.nav" beforeDir="false" afterPath="$PROJECT_DIR$/pre.nav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pre.out" beforeDir="false" afterPath="$PROJECT_DIR$/pre.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pre.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/pre.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pre.snm" beforeDir="false" afterPath="$PROJECT_DIR$/pre.snm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pre.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/pre.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pre.tex" beforeDir="false" afterPath="$PROJECT_DIR$/pre.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pre.toc" beforeDir="false" afterPath="$PROJECT_DIR$/pre.toc" afterDir="false" />
-    </list>
+    <list default="true" id="f3b45364-13ba-4bac-a43b-5e9a59dcc243" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +55,7 @@
       <file leaf-file-name="obserb_to_param_mine.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/obserb_to_param_mine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4321">
+            <state relative-caret-position="-3993">
               <caret line="99" column="43" selection-start-line="99" selection-start-column="43" selection-end-line="99" selection-end-column="43" />
               <folding>
                 <element signature="e#2#25#0" expanded="true" />
@@ -315,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1532587597646</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="slides done">
+      <created>1532616032959</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1532616032959</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView">
@@ -329,14 +319,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50159913" side_tool="true" weight="0.3576881" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Python Console" order="3" weight="0.11220044" />
-      <window_info active="true" anchor="bottom" id="Run" order="8" sideWeight="0.49840087" visible="true" weight="0.3576881" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49840087" weight="0.3576881" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32897604" />
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.098614074" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
@@ -366,7 +355,8 @@
     <MESSAGE value="layers'number:7 to 5&#10;labels*=10" />
     <MESSAGE value="some little change&#10;add a pre pdf" />
     <MESSAGE value="pre half done" />
-    <option name="LAST_COMMIT_MESSAGE" value="pre half done" />
+    <MESSAGE value="slides done" />
+    <option name="LAST_COMMIT_MESSAGE" value="slides done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -793,7 +783,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/obserb_to_param_mine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4321">
+        <state relative-caret-position="-3993">
           <caret line="99" column="43" selection-start-line="99" selection-start-column="43" selection-end-line="99" selection-end-column="43" />
           <folding>
             <element signature="e#2#25#0" expanded="true" />

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2018.4.23)  26 JUL 2018 22:32
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017/W32TeX) (preloaded format=xelatex 2018.4.23)  26 JUL 2018 22:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2594,56 +2594,52 @@ LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <5> not available
 (Font)              Font shape `TU/lmss/m/sl' tried instead on input line 47.
  [3
 
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+] [4
 
- [4
-
-]
-[5] [6
+] [5
 
 ]
 Overfull \hbox (14.24776pt too wide) in paragraph at lines 91--91
 [][]  
  []
 
-[7
+[6
+
+] [7
 
 ] [8
 
 ] [9
-
-] [10
 
 ]
 Overfull \hbox (25.93404pt too wide) in paragraph at lines 173--173
 [][]  
  []
 
-[11
+[10
 
 ]
 File: Result1.jpg Graphic file (type QTm)
- <use  "Result1.jpg" > [12
+ <use  "Result1.jpg" > [11
+
+] [12
 
 ] [13
 
 ] [14
-
-] [15
 
 ]
 Overfull \hbox (25.93404pt too wide) in paragraph at lines 257--257
 [][]  
  []
 
-[16
+[15
+
+] [16
 
 ] [17
 
 ] [18
-
-] [19
 
 ]
 \tf@nav=\write6
@@ -2666,12 +2662,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 53004 strings out of 493005
- 1139638 string characters out of 6137956
+ 52993 strings out of 493005
+ 1139283 string characters out of 6137956
  1307974 words of memory out of 5000000
- 56142 multiletter control sequences out of 15000+600000
+ 56131 multiletter control sequences out of 15000+600000
  9615 words of font info for 64 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  64i,15n,72p,10442b,769s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on pre.pdf (19 pages).
+Output written on pre.pdf (18 pages).

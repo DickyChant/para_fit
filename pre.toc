@@ -1,5 +1,5 @@
 \beamer@sectionintoc {1}{Parameter Fitting}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Preview}{4}{0}{1}
-\beamer@subsectionintoc {1}{2}{Parameters to Obserables}{9}{0}{1}
-\beamer@subsectionintoc {1}{3}{Obserables to Parameters}{14}{0}{1}
-\beamer@sectionintoc {2}{Reinforcement Learning}{18}{0}{2}
+\beamer@subsectionintoc {1}{2}{Parameters to Obserables}{8}{0}{1}
+\beamer@subsectionintoc {1}{3}{Obserables to Parameters}{13}{0}{1}
+\beamer@sectionintoc {2}{Reinforcement Learning}{17}{0}{2}
