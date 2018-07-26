@@ -116,6 +116,7 @@ y_data3 = sess.run(output,feed_dict={xs:x_test1,ys:y_test1})
 y_data3=y_data3[0:23,:]
 fig1=plt.figure(1, dpi=300) ##加一个图片框
 
+
 #ax=fig.add_subplot(1,1,1)
 x_data3 = np.linspace(-5,5,56*23)[:,np.newaxis]
 #ax.scatter(x_data3,y_data3.reshape(-1,1))
