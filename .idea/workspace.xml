@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3b45364-13ba-4bac-a43b-5e9a59dcc243" name="Default" comment="" />
+    <list default="true" id="f3b45364-13ba-4bac-a43b-5e9a59dcc243" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/p_ob_keras.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Result1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/Result1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_para_to_obs.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_para_to_obs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ob_to_p/error_relative_10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ob_to_p/error_relative_10.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ob_to_p/predictions_10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ob_to_p/predictions_10.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obserb_to_param_mine.py" beforeDir="false" afterPath="$PROJECT_DIR$/obserb_to_param_mine.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,8 +19,8 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/para_fit$param_obserb.coverage" NAME="param_obserb Coverage Results" MODIFIED="1532346415741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/para_fit$obserb_to_param_mine.coverage" NAME="obserb_to_param_mine Coverage Results" MODIFIED="1532614936609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/para_fit$my_para_to_obs.coverage" NAME="my_para_to_obs Coverage Results" MODIFIED="1532611829433" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/para_fit$obserb_to_param_mine.coverage" NAME="obserb_to_param_mine Coverage Results" MODIFIED="1533178960428" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/para_fit$my_para_to_obs.coverage" NAME="my_para_to_obs Coverage Results" MODIFIED="1533186492978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/para_fit$obserb_to_param.coverage" NAME="obserb_to_param Coverage Results" MODIFIED="1531633835249" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
@@ -52,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="obserb_to_param_mine.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="obserb_to_param_mine.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/obserb_to_param_mine.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3993">
-              <caret line="99" column="43" selection-start-line="99" selection-start-column="43" selection-end-line="99" selection-end-column="43" />
+            <state relative-caret-position="509">
+              <caret line="179" column="13" lean-forward="true" selection-start-line="162" selection-end-line="179" selection-end-column="13" />
               <folding>
                 <element signature="e#2#25#0" expanded="true" />
               </folding>
@@ -64,11 +72,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="my_para_to_obs.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="my_para_to_obs.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/my_para_to_obs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3540">
-              <caret line="125" column="104" selection-start-line="125" selection-start-column="104" selection-end-line="125" selection-end-column="104" />
+            <state>
+              <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="p_ob_keras.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p_ob_keras.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -85,6 +105,12 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>256</find>
+      <find>Re</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -95,8 +121,9 @@
         <option value="$PROJECT_DIR$/obserb_to_param.py" />
         <option value="$PROJECT_DIR$/ob_to_para.py" />
         <option value="$PROJECT_DIR$/para_to_ob.py" />
-        <option value="$PROJECT_DIR$/my_para_to_obs.py" />
+        <option value="$PROJECT_DIR$/p_ob_keras.py" />
         <option value="$PROJECT_DIR$/obserb_to_param_mine.py" />
+        <option value="$PROJECT_DIR$/my_para_to_obs.py" />
       </list>
     </option>
   </component>
@@ -110,7 +137,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
+    <option name="x" value="489" />
+    <option name="y" value="194" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -160,7 +188,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.obserb_to_param_mine">
+  <component name="RunManager" selected="Python.my_para_to_obs">
     <configuration name="my_para_to_obs" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="para_fit" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -245,8 +273,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.obserb_to_param_mine" />
         <item itemvalue="Python.my_para_to_obs" />
+        <item itemvalue="Python.obserb_to_param_mine" />
         <item itemvalue="Python.param_obserb" />
         <item itemvalue="Python.obserb_to_param" />
       </list>
@@ -319,15 +347,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="12" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50159913" side_tool="true" weight="0.3576881" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="1" />
       <window_info anchor="bottom" id="Python Console" order="3" weight="0.11220044" />
-      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49840087" weight="0.3576881" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.49840087" visible="true" weight="0.3576881" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32897604" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.098614074" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.10927505" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="2" weight="0.32995737" />
       <window_info anchor="right" id="SciView" order="0" weight="0.7990405" />
@@ -371,16 +400,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/my_para_to_obs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/obserb_to_param_mine.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2130">
@@ -412,9 +431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -446,9 +462,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -480,9 +493,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -771,10 +781,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my_para_to_obs.py">
+    <entry file="file://$PROJECT_DIR$/p_ob_keras.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3540">
-          <caret line="125" column="104" selection-start-line="125" selection-start-column="104" selection-end-line="125" selection-end-column="104" />
+        <state relative-caret-position="360">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="35" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -783,10 +793,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/obserb_to_param_mine.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3993">
-          <caret line="99" column="43" selection-start-line="99" selection-start-column="43" selection-end-line="99" selection-end-column="43" />
+        <state relative-caret-position="509">
+          <caret line="179" column="13" lean-forward="true" selection-start-line="162" selection-end-line="179" selection-end-column="13" />
           <folding>
             <element signature="e#2#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_para_to_obs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="27" column="23" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>

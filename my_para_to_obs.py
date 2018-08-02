@@ -9,13 +9,23 @@ import smtplib
 
 
 x_test=np.loadtxt('./obserables_for_test.txt')
-y_test=np.loadtxt('./parameters_for_test.txt')
+y_test=np.loadtxt('./para_normal_test.txt')
 
 x_data0 = np.loadtxt("./obserables_for_train.txt ")
 #x_data0=x_data0*10
-y_data0 = np.loadtxt("./parameters_for_train.txt")
+y_data0 = np.loadtxt("./para_normal_train.txt")
 #y_data0[:,2]*=20
-
+for i in range(7):
+	x_test[:,i*8+7]*=100
+	x_data0[:,i*8+7]*=100
+	x_test[:, i * 8 ] *= 0.01
+	x_data0[:, i * 8 ] *= 0.01
+	x_test[:, i * 8+5 ] *= 0.01
+	x_data0[:, i * 8+5 ] *= 0.01
+	x_test[:, i * 8+6 ] *= 0.1
+	x_data0[:, i *8+6 ] *= 0.1
+	x_test[:, i * 8+1 ] *= 0.01
+	x_data0[:, i * 8 +1] *= 0.01
 def get_random_block_from_data(data0,mark0):
 	num_events = data0.shape[0]
 	indices = np.arange(num_events)
@@ -31,13 +41,13 @@ with tf.name_scope('inputs'):
 	xs=tf.placeholder(tf.float32,[None,56],name='x_input')
 	ys=tf.placeholder(tf.float32,[None,5],name='y_input')
 
-l1=tf.layers.dense(ys,128,activation=tf.nn.relu)
+l1=tf.layers.dense(ys,128,activation=tf.nn.leaky_relu)
 l1=tf.layers.dropout(l1)
-l1=tf.layers.dense(l1,128,activation=tf.nn.relu)
+l1=tf.layers.dense(l1,128,activation=tf.nn.leaky_relu)
 l1=tf.layers.dropout(l1)
-l1=tf.layers.dense(l1,128,activation=tf.nn.relu)
+l1=tf.layers.dense(l1,128,activation=tf.nn.leaky_relu)
 l1=tf.layers.dropout(l1)
-l1=tf.layers.dense(l1,128,activation=tf.nn.relu)
+l1=tf.layers.dense(l1,128,activation=tf.nn.leaky_relu)
 l1=tf.layers.dropout(l1)
 
 output=tf.layers.dense(l1,56)
@@ -48,7 +58,7 @@ with tf.name_scope('loss'):
     loss = tf.reduce_mean(tf.square(tf.reshape(xs, [-1, 1]) - pred))
 
 with tf.name_scope('train'):
-    train_step=tf.train.AdamOptimizer(0.0005).minimize(loss)
+    train_step=tf.train.AdamOptimizer(0.00005).minimize(loss)
 
 sess=tf.Session()
 
@@ -56,7 +66,7 @@ init=tf.initialize_all_variables()
 
 sess.run(init)
 
-for i in range(200000):
+for i in range(500000):
     x_data1,y_data1=get_random_block_from_data(x_data0,y_data0)
     sess.run(train_step,feed_dict={xs:x_data1,ys:y_data1})
 
@@ -82,8 +92,8 @@ c[:,:,0]=x_test1[0:23,:]
 #y_test1[:,2]*=20
 c[:,:,1]=b[0:23,:]
 
-#np.savetxt('./p_to_ob/predictions.txt',a[0:23,:])
-#np.savetxt('./p_to_ob/error_relative.txt',b[0:23,:])
+np.savetxt('./p_to_ob/predictions_adjust.txt',a[0:23,:])
+np.savetxt('./p_to_ob/error_relative_adjust.txt',b[0:23,:])
 np.set_printoptions(precision=3, suppress=True)
 print(b[0:23,:])
 

@@ -59,36 +59,36 @@ def get_ordered_block_from_data(data0,mark0):
 	data_x=data0.reshape([5,44,56])
 	data_y=mark0.reshape([5,44,5])
 	return(data_x,data_y)
-x_data0 = np.loadtxt("./obserables_for_train.txt ")
-x_data0=x_data0*10
+x_data0 = np.loadtxt("./obs_normal_train.txt ")
+#x_data0=x_data0*10
 y_data0 = np.loadtxt("./parameters_for_train.txt")
-y_data0*=10
+#y_data0*=10
 #y_data0[:,2]*=20
 ## define placeholder for inputs to network
 with tf.name_scope('inputs'):
 	xs=tf.placeholder(tf.float32,[None,56],name='x_input')
 	ys=tf.placeholder(tf.float32,[None,5],name='y_input')
 ##　add hidden layer
-l1=tf.layers.dense(xs,256,activation=tf.nn.relu,use_bias=False)
+l1=tf.layers.dense(xs,128,activation=tf.nn.leaky_relu)
 l1=tf.layers.dropout(l1)
-l2=tf.layers.dense(l1,256,activation=tf.nn.relu,use_bias=False)
+l2=tf.layers.dense(l1,128,activation=tf.nn.leaky_relu)
 l2=tf.layers.dropout(l2)
-l2=tf.layers.dense(l2,256,activation=tf.nn.relu,use_bias=False)
+l2=tf.layers.dense(l2,128,activation=tf.nn.leaky_relu)
 l2=tf.layers.dropout(l2)
 #l2=tf.layers.dense(l2,512,activation=tf.nn.relu,use_bias=False)
 #l2=tf.layers.dropout(l2)
 #l2=tf.layers.dense(l2,256,activation=tf.nn.relu,use_bias=False)
 #l2=tf.layers.dropout(l2)
-l2=tf.layers.dense(l2,256,activation=tf.nn.relu,use_bias=False)
+l2=tf.layers.dense(l2,128,activation=tf.nn.leaky_relu)
 l2=tf.layers.dropout(l2)
 #l2=tf.layers.dense(l2,64,activation=tf.nn.relu,use_bias=False)
 #l2=tf.layers.dropout(l2)
 ## add conv layer
 #l1=add_conv(l1,100,activation_function=tf.nn.relu)
 ## add output layer
-prediction=tf.layers.dense(l2,5,use_bias=False)
-weight=np.diag((1,1,1,1,1))
-reverse=np.diag((1,1,1,1,1))
+prediction=tf.layers.dense(l2,5)
+weight=np.diag((1,1,10,1,1))
+reverse=np.diag((1,1,0.1,1,1))
 weight_tf=tf.Variable(weight,trainable=False,dtype=tf.float32)
 reverse_tf=tf.Variable(reverse,trainable=False,dtype=tf.float32)
 prediction1 = tf.reshape(prediction,[-1,1])
@@ -97,7 +97,7 @@ with tf.name_scope('loss'):
 
 	loss=tf.reduce_mean(tf.reduce_sum(tf.square(tf.reshape(labels,[-1,1])-prediction1),reduction_indices=[1]))
 with tf.name_scope('train'):
-	train_step=tf.train.AdamOptimizer(0.0005).minimize(loss)
+	train_step=tf.train.AdamOptimizer(0.00001).minimize(loss)
 
 init=tf.initialize_all_variables()
 
@@ -106,7 +106,7 @@ writer=tf.summary.FileWriter("logs/",sess.graph)
 sess.run(init)
 
 
-for i in range(200000):
+for i in range(500000):
 
 	x_data1, y_data1 = get_random_block_from_data(x_data0, y_data0)
 		#y_data1=y_data1*10
@@ -129,16 +129,16 @@ print(sess.run(prediction,feed_dict={xs:x_data1,ys:y_data1}))
 print(y_data1)
 print(sess.run(loss,feed_dict={xs:x_data1,ys:y_data1}))
 
-x_test=np.loadtxt('./obserables_for_test.txt')
+x_test=np.loadtxt('./obs_normal_test.txt')
 y_test=np.loadtxt('./parameters_for_test.txt')
 #y_test[:,2]*=20
 x_test=np.tile(x_test,[2,1])
 y_test=np.tile(y_test,[2,1])
 
 x_test1=x_test[0:44,:]
-x_test1*=10
+#x_test1*=10
 y_test1=y_test[0:44,:]
-y_test1*=10
+#y_test1*=10
 print(sess.run(prediction,feed_dict={xs:x_test1,ys:y_test1}))
 print(y_test1)
 print(sess.run(loss,feed_dict={xs:x_test1,ys:y_test1}))
@@ -179,7 +179,8 @@ server.login(from_addr,password)
 server.sendmail(from_addr,to_addr,msg1.as_string())
 server.quit()
 
-Re=True
+Re=False
+
 if Re:
 	#y_data0[:,2]/=10
 	x_data0/=10
@@ -205,8 +206,8 @@ if Re:
 	print(y_data1)
 	print(sess.run(loss, feed_dict={xs: x_data1, ys: y_data1}))
 
-	x_test = np.loadtxt('./obserables_for_test.txt')
-	y_test = np.loadtxt('./parameters_for_test.txt')
+	x_test = np.loadtxt('./obs_normal_test.txt')
+	y_test = np.loadtxt('./para_normal_test.txt')
 	#y_test[:, 2] *= 10
 	x_test = np.tile(x_test, [2, 1])
 	y_test = np.tile(y_test, [2, 1])
