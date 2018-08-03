@@ -59,7 +59,7 @@ def get_ordered_block_from_data(data0,mark0):
 	data_x=data0.reshape([5,44,56])
 	data_y=mark0.reshape([5,44,5])
 	return(data_x,data_y)
-x_data0 = np.loadtxt("./obs_normal_train.txt ")
+x_data0 = np.loadtxt("./obs_normal_train.txt")
 #x_data0=x_data0*10
 y_data0 = np.loadtxt("./parameters_for_train.txt")
 #y_data0*=10
@@ -87,8 +87,8 @@ l2=tf.layers.dropout(l2)
 #l1=add_conv(l1,100,activation_function=tf.nn.relu)
 ## add output layer
 prediction=tf.layers.dense(l2,5)
-weight=np.diag((1,1,10,1,1))
-reverse=np.diag((1,1,0.1,1,1))
+weight=np.diag((10,10,100,10,10))
+reverse=np.diag((0.1,0.1,0.01,0.1,0.1))
 weight_tf=tf.Variable(weight,trainable=False,dtype=tf.float32)
 reverse_tf=tf.Variable(reverse,trainable=False,dtype=tf.float32)
 prediction1 = tf.reshape(prediction,[-1,1])
@@ -106,7 +106,7 @@ writer=tf.summary.FileWriter("logs/",sess.graph)
 sess.run(init)
 
 
-for i in range(500000):
+for i in range(2000000):
 
 	x_data1, y_data1 = get_random_block_from_data(x_data0, y_data0)
 		#y_data1=y_data1*10

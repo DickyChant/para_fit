@@ -11,7 +11,7 @@ import smtplib
 x_test=np.loadtxt('./obs_normal_test.txt')
 y_test=np.loadtxt('./parameters_for_test.txt')
 
-x_data0 = np.loadtxt("./obs_normal_train.txt ")
+x_data0 = np.loadtxt("./obs_normal_train.txt")
 #x_data0=x_data0*10
 y_data0 = np.loadtxt("./parameters_for_train.txt")
 #y_data0[:,2]*=20
